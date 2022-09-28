@@ -1,13 +1,10 @@
 
 
 
-export function Routes({ path, NavMenu, Footer, BodyElement }){
-    if(NavMenu === undefined) return null
+export function Routes({ path, Element }){
     return (
         <div>
-            <NavMenu />
-            <BodyElement />
-            <Footer />
+            'hola'
         </div>
     )
 }

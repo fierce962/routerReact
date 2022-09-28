@@ -1,11 +1,12 @@
-import React, { useRef } from "react";
+import { useDispatch } from "react-redux";
+import { loadElementsRouting } from "../models/routingElements";
 
 export function Route(props){
-    const difRef = useRef(null)
     console.log(props)
+    loadElementsRouting(props)
     return (
         <div>
-            { props.children } 
+            { props.children }
         </div>
     )
 }
