@@ -1,10 +1,10 @@
 
 
 
-export function Routes({ path, Element }){
+export function Routes({ path, Element}){
     return (
         <div>
-            'hola'
+            <Element />
         </div>
     )
 }
