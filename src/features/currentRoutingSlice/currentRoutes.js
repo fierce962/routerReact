@@ -4,12 +4,10 @@ import { createSlice } from '@reduxjs/toolkit';
 const currentRouting = createSlice({
     name: 'currentRouting',
     initialState: {
-        currentRoute: ''
+        path: '/'
     },
     reducers: {
-        setNewRoute: () => {
-
-        },
+        
     }
 })
 
