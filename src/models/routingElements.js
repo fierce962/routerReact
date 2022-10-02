@@ -1,5 +1,3 @@
-
-
 const elementsRouting = [];
 
 export function loadElementsRouting(props){
@@ -39,9 +37,6 @@ function getTypeNameRouting(propsChildren){
 function getPropsElement(propsChildren){
     return propsChildren.props
 }
-
-
-
 
 export function getElementByPath(path){
     let renderElement;
