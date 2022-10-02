@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-
+import { getIndexByPath } from '../../models/routingElements';
 
 const currentRouting = createSlice({
     name: 'currentRouting',
@@ -10,7 +10,8 @@ const currentRouting = createSlice({
     reducers: {
         changePath: (state, actions) => {
             state.path = actions.payload;
-        }
+            state.indexProps = getIndexByPath(actions.payload);
+        },
     }
 })
 

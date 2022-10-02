@@ -1,4 +1,5 @@
 const elementsRouting = [];
+let elementCurrentIndex = 0;
 
 export function loadElementsRouting(props){
     getElementRouting(props.children);
@@ -38,14 +39,18 @@ function getPropsElement(propsChildren){
     return propsChildren.props
 }
 
-export function getElementByPath(path){
-    let renderElement;
-    elementsRouting.some(element => {
-        if(element.type === "GroupRoutes" && element.routingElement[path] !== undefined){
-            renderElement = element.routingElement[path];
+export function getIndexByPath(path){
+    elementsRouting.some((element, index) => {
+        if(element.routingElement[path] !== undefined){
+            elementCurrentIndex = index;
             return true;
         }
         return false
     })
-    return renderElement;
+    return elementCurrentIndex;
+}
+
+
+export function getElementByPath(path){
+    return elementsRouting[elementCurrentIndex].routingElement[path];
 }

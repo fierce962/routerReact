@@ -2,17 +2,22 @@ import './App.css';
 import { Route } from './components/route';
 import { Routes } from './components/routes';
 import { GroupRoutes } from './components/groupRoutes';
+import Link from './components/Link';
 
 function CreateTest(){
   return(
-    <div>1</div>
+    <div>1
+
+      <Link path={ '/route2' }/>
+    </div>
 
   )
 }
 
 function CreateTest2(){
   return(
-    <div>2</div>
+    <div>2
+    </div>
 
   )
 }
