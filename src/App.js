@@ -7,7 +7,6 @@ import Link from './components/Link';
 function CreateTest(){
   return(
     <div>1
-
       <Link path={ '/route2' }/>
     </div>
 

@@ -9,8 +9,10 @@ const currentRouting = createSlice({
     },
     reducers: {
         changePath: (state, actions) => {
-            state.path = actions.payload;
-            state.indexProps = getIndexByPath(actions.payload);
+            if(state.path !== actions.payload){
+                state.path = actions.payload;
+                state.indexProps = getIndexByPath(actions.payload);
+            }
         },
     }
 })
