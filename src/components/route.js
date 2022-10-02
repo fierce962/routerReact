@@ -12,6 +12,9 @@ export function Route(props){
     if(firstRender.current){
         dispatch(changePath(window.location.pathname));
         firstRender.current = false;
+        window.addEventListener('popstate', () => { 
+            dispatch(changePath(window.location.pathname));
+        });
     }
     
     return (

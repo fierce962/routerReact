@@ -9,7 +9,6 @@ function CreateTest(){
     <div>1
       <Link path={ '/route2' }/>
     </div>
-
   )
 }
 
@@ -18,14 +17,12 @@ function CreateTest2(){
     <div>2
       <Link path={ '/route3' }/>
     </div>
-
   )
 }
 
 function CreateTest3({ element }){
   return(
     <div>{ element }</div>
-
   )
 }
 
