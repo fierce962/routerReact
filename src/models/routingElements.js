@@ -2,7 +2,11 @@ const elementsRouting = [];
 let elementCurrentIndex = 0;
 
 export function loadElementsRouting(props){
-    getElementRouting(props.children);
+    if(props.children !== undefined){
+        getElementRouting(props.children);
+    }else{
+        console.error('Routes or RoutesGroup is no define')
+    }
 }
 
 function getElementRouting(propsChildren){

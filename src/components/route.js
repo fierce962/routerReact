@@ -19,7 +19,18 @@ export function Route(props){
     
     return (
         <div>
-            { props.children.length !== undefined ? props.children[indexProps] : props.children }
+            <RenderRoute props={ props } index={ indexProps } />
         </div>
     )
+}
+
+function RenderRoute({ props, index }){
+    if(props.children === undefined){
+        return null
+    }
+    if(props.children.length !== undefined){
+        return props.children[index]
+    }else{
+        return props.children
+    }
 }
