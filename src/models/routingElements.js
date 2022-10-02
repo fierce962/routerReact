@@ -9,11 +9,14 @@ function getElementRouting(propsChildren){
     if(propsChildren.length !== undefined){
         propsChildren.forEach(routes => {
             const routesName = getTypeNameRouting(routes);
-            const elements = getRoutesPropsElements(routes)
+            const elements = getRoutesPropsElements(routes);
             elementsRouting.push({ type: routesName, routingElement: elements })
         });
     }else{
-
+        const routesName = getTypeNameRouting(propsChildren);
+        const elements = getRoutesPropsElements(propsChildren);
+        console.log(elements)
+        elementsRouting.push({ type: routesName, routingElement: elements })
     }
 }
 
@@ -52,5 +55,13 @@ export function getIndexByPath(path){
 
 
 export function getElementByPath(path){
-    return elementsRouting[elementCurrentIndex].routingElement[path];
+    const currentElment = elementsRouting[elementCurrentIndex].routingElement[path];
+    if(currentElment !== undefined) return currentElment;
+    hasError(path)
+    return null
+}
+
+
+function hasError(path){
+    if(path === '/') console.error('Initial Route no define in routes please define <Routes path={ / } />'); 
 }

@@ -6,7 +6,7 @@ export function Routes({ path, Element }){
     const RenderElement = getElementByPath(currentPath);
     return (
         <div>
-            <RenderElement />
+            { RenderElement }
         </div>
     )
 }

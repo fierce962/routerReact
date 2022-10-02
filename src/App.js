@@ -17,14 +17,15 @@ function CreateTest(){
 function CreateTest2(){
   return(
     <div>2
+      <Link path={ '/route3' }/>
     </div>
 
   )
 }
 
-function CreateTest3(){
+function CreateTest3({ element }){
   return(
-    <div>3</div>
+    <div>{ element }</div>
 
   )
 }
@@ -45,11 +46,11 @@ function App() {
   return (
     <div>
       <Route>
-        <GroupRoutes NavMenu={ CreateNav } Footer={ CreateFooter }>
-          <Routes path={ '/' } Element={ CreateTest }/>
-          <Routes path={ '/route2' } Element={ CreateTest2 }/>
+        <GroupRoutes NavMenu={ <CreateNav /> } Footer={ <CreateFooter /> }>
+          <Routes path={ '/' } Element={ <CreateTest /> }/>
+          <Routes path={ '/route2' } Element={ <CreateTest2 /> }/>
         </GroupRoutes>
-        <Routes path={ '/route3' } Element={ CreateTest3 }/>
+        <Routes path={ '/route3' } Element={ <CreateTest3 element={ '3' } /> }/>
       </Route>
     </div>
   );
