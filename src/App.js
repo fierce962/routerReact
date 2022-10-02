@@ -19,7 +19,7 @@ function CreateTest2(){
 
 function CreateTest3(){
   return(
-    <div>2</div>
+    <div>3</div>
 
   )
 }
@@ -44,7 +44,7 @@ function App() {
           <Routes path={ '/' } Element={ CreateTest }/>
           <Routes path={ '/route2' } Element={ CreateTest2 }/>
         </GroupRoutes>
-        <Routes path={ '/route2' } Element={ CreateTest3 }/>
+        <Routes path={ '/route3' } Element={ CreateTest3 }/>
       </Route>
     </div>
   );

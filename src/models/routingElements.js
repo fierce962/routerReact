@@ -4,7 +4,6 @@ const elementsRouting = [];
 
 export function loadElementsRouting(props){
     getElementRouting(props.children);
-    console.log('elementsrouting', elementsRouting)
 }
 
 function getElementRouting(propsChildren){
@@ -23,11 +22,12 @@ function getRoutesPropsElements(propsChildren){
     const routingElement = {};
     if(propsChildren.props.children !== undefined && propsChildren.props.children.length !== undefined){
         propsChildren.props.children.forEach(routesChildren => {
-            const propsChildren = getPropsElement(routesChildren);
-            routingElement[propsChildren.path] = propsChildren.Element;
+            const childrenProps = getPropsElement(routesChildren);
+            routingElement[childrenProps.path] = childrenProps.Element;
         })
     }else{
-
+        const childrenProps = getPropsElement(propsChildren);
+        routingElement[childrenProps.path] = childrenProps.Element;
     }
     return routingElement;
 }
@@ -44,13 +44,13 @@ function getPropsElement(propsChildren){
 
 
 export function getElementByPath(path){
-    // let renderElement;
-    // elementsRouting.some(element => {
-    //     if(element.type === "GroupRoutes" && element.routingElement[path] !== undefined){
-    //         renderElement = element.routingElement[path].props.Element;
-    //         return true;
-    //     }
-    //     return false
-    // })
-    // return renderElement;
+    let renderElement;
+    elementsRouting.some(element => {
+        if(element.type === "GroupRoutes" && element.routingElement[path] !== undefined){
+            renderElement = element.routingElement[path];
+            return true;
+        }
+        return false
+    })
+    return renderElement;
 }
