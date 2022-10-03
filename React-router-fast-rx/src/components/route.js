@@ -1,9 +1,9 @@
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { loadElementsRouting } from "../models/routingElements";
 import { changePath } from "../features/currentRoutingSlice/currentRoutes";
 
-export function Route(props){
+export default function Route(props){
     const firstRender = useRef(true);
     const dispatch = useDispatch();
     const indexProps = useSelector(state => state.currentRouting.indexProps);

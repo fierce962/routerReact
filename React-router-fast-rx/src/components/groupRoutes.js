@@ -1,6 +1,7 @@
-import { Routes } from "./routes";
+import React from "react";
+import Routes from "./routes";
 
-export function GroupRoutes({ NavMenu, Footer }){
+export default function GroupRoutes({ NavMenu, Footer }){
     return (
         <div>
             { NavMenu }

@@ -1,8 +1,10 @@
 import './App.css';
-import { Route } from './components/route';
-import { Routes } from './components/routes';
-import { GroupRoutes } from './components/groupRoutes';
-import Link from './components/Link';
+import { Route } from 'react-router-fast-rx';
+import { Routes } from 'react-router-fast-rx';
+import { GroupRoutes } from 'react-router-fast-rx';
+import { Link } from 'react-router-fast-rx';
+import Test from 'react-router-fast-rx'
+
 
 function CreateTest(){
   return(
