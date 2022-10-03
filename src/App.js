@@ -3,7 +3,6 @@ import { Route } from 'react-router-fast-rx';
 import { Routes } from 'react-router-fast-rx';
 import { GroupRoutes } from 'react-router-fast-rx';
 import { Link } from 'react-router-fast-rx';
-import Test from 'react-router-fast-rx'
 
 
 function CreateTest(){

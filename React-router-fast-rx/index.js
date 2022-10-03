@@ -180,14 +180,9 @@ function RouterBroser(_ref) {
   }, /*#__PURE__*/React__default["default"].createElement(AppComponent, null));
 }
 
-function Test() {
-  return /*#__PURE__*/React__default["default"].createElement("div", null, "hola");
-}
-
 exports.GroupRoutes = GroupRoutes;
 exports.Link = Link;
 exports.Route = Route;
 exports.RouterBroser = RouterBroser;
 exports.Routes = Routes;
-exports["default"] = Test;
 //# sourceMappingURL=index.js.map

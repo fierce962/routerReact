@@ -1,6 +1,4 @@
 import React from "react";
-
-
 import GroupRoutes from './components/groupRoutes';
 import Link from './components/Link';
 import Route from './components/route';
@@ -13,12 +11,4 @@ export {
     Route,
     RouterBroser,
     Routes
-}
-
-export default function Test(){
-    return (
-        <div>
-            hola
-        </div>
-    )
 }
